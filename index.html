@@ -4,66 +4,148 @@
 <head>
     <meta charset="UTF-8">
     <title>Cartão de Visita - Cayenne</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0px;
+        }
+
+        body {
+            background-color: #dbeafe;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            margin-left: 10px;
+        }
+
+        nav {
+            margin-left: 15px;
+        }
+
+        main {
+            flex: 1;
+            margin: 15px;
+            margin-top: 0px;
+        }
+
+        h1, h2, h3 {
+            color: #1565c0;
+        }
+
+        strong {
+            color: #1976d2;
+        }
+
+        a {
+            color: #1976d2;
+        }
+
+        hr {
+            border: none;
+            height: 1.5px;
+            background-color: #1565c0;
+            width: 100%;
+            flex-shrink: 0;
+            margin: 15px 0;
+        }
+
+        footer {
+            background-color: #1565c0;
+            color: #ffffff;
+            padding: 8px 20px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
-    <body style="background-color: #f8d7e3;"></body>
 
-    <!-- Seção 1: Identificação -->
-    <h1>Cayenne Galante do Nascimento</h1>
-    <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas - ADS</p>
-    <p><strong>Cidade/UF:</strong> Jandira-SP</p>
+    <header>
+        <h1>Cayenne Galante do Nascimento</h1>
+        <p>Analise e Desenvolvimento de Sistemas - ADS</p>
+    </header>
+
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#hobies">Hobbies</a>
+        <a href="#contato">Contato</a>
+        <a href="#objetivo">Objetivos</a>
+        <a href="#sites">Sites</a>
+    </nav>
 
     <hr>
 
-    <!-- Seção 2: Quem sou eu -->
-    <h2> Quem sou eu</h2>
-    <p>Sou uma pessoa curiosa, criativa e gosto de estar sempre aprendendo coisas novas. No meu tempo livre, gosto de ouvir música, ler, assistir filmes e explorar diferentes formas de arte e entretenimento.</p>
-    <p>O que me motiva a estudar tecnologia é a possibilidade de criar soluções para problemas reais. Quero desenvolver cada vez mais minha lógica de programação e construir uma carreira na área de desenvolvimento de software.</p>
+    <main>
+        <section id="sobre">
+            <h2>Sobre mim</h2>
+            <p><strong>Cidade/UF:</strong> Jandira-SP</p>
+            <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas - ADS</p>
+        </section>
 
-    <!-- Seção 3: Tecnologias que conheço -->
-    <h2> Tecnologias que já vi</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Java</li>
-        <li>Python</li>
-    </ul>
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+                <li>Python</li>
+            </ul>
+        </section>
 
-    <!-- Seção 4: Meus hobbies -->
-    <h2> Meus hobbies favoritos</h2>
-    <ul>
-        <li>Tocar teclado</li>
-        <li>Ler</li>
-        <li>Assistir filmes</li>
-        <li>Ouvir música</li>
-        <li>Jogar</li>
-    </ul>
+        <section id="hobies">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Tocar teclado</li>
+                <li>Ler</li>
+                <li>Assistir filmes</li>
+                <li>Ouvir música</li>
+                <li>Jogar</li>
+            </ul>
+        </section>
 
-    <!-- Seção 5: Meus objetivos -->
-    <h2> Objetivos profissionais</h2>
-    <ol>
-        <li><strong>Curto prazo (6 meses):</strong> Estar atuando na área de tecnologia como Jovem Aprendiz em Tecnologia ou Projetos.</li>
-        <li><strong>Médio prazo (1-2 anos):</strong> Conseguir um estágio em Desenvolvimento de Software e começar a atuar diretamente na criação de aplicações.</li>
-        <li><strong>Longo prazo (3-5 anos):</strong> Trabalhar como desenvolvedora de software e atuar na criação de sistemas e soluções para problemas reais.</li>
-    </ol>
+        <section id="contato">
+            <h2>Contatos</h2>
+            <ul>
+                <li><a href="https://github.com/CayenneGn7" target="_blank">Meu GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/cayenne-galante-do-nascimento/" target="_blank">Meu LinkedIn</a></li>
+                <li><a href="mailto:cayennegnascimento@gmail.com">Meu e-mail</a></li>
+            </ul>
+        </section>
 
-    <!-- Seção 6: Links úteis -->
-    <h2>🔗 Links para me encontrar</h2>
-    <ul>
-        <li><a href="https://github.com/CayenneGn7" target="_blank">Meu GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/cayenne-galante-do-nascimento/" target="_blank">Meu LinkedIn</a></li>
-        <li><a href="mailto:cayennegnascimento@gmail.com">Meu e-mail</a></li>
-    </ul>
+        <section id="objetivo">
+            <h2>Objetivos Profissionais</h2>
+            <ol>
+                <li><strong>Curto prazo (6 meses):</strong> Estar atuando na área de tecnologia como Jovem Aprendiz em Tecnologia ou Projetos.</li>
+                <li><strong>Médio prazo (1-2 anos):</strong> Conseguir um estágio em Desenvolvimento de Software e começar a atuar diretamente na criação de aplicações.</li>
+                <li><strong>Longo prazo (3-5 anos):</strong> Trabalhar como desenvolvedora de software e atuar na criação de sistemas e soluções para problemas reais.</li>
+            </ol>
+        </section>
 
-    <!-- Seção 7: Sites que mais uso (DESAFIO) -->
-    <h2> TOP 5 sites que mais acesso</h2>
-    <ol>
-        <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
-        <li><a href="https://www.last.fm/" target="_blank">Last.fm</a></li>
-        <li><a href="https://www.spotify.com/" target="_blank">Spotify</a></li>
-        <li><a href="https://letterboxd.com/" target="_blank">Letterboxd</a></li>
-        <li><a href="https://archive.org/" target="_blank">Internet Archive</a></li>
-    </ol>
+        <section id="sites">
+          <h2>TOP 5 sites que mais acesso</h2>
+            <ol>
+                <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+                <li><a href="https://www.last.fm/" target="_blank">Last.fm</a></li>
+                <li><a href="https://www.spotify.com/" target="_blank">Spotify</a></li>
+                <li><a href="https://letterboxd.com/" target="_blank">Letterboxd</a></li>
+                <li><a href="https://archive.org/" target="_blank">Internet Archive</a></li>
+            </ol>
+        </section>
+
+        <aside>
+            <h3>Curiosidade sobre mim</h3>
+            <p>Gosto de cuidar de hortas e plantas.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Cayenne 2026</p>
+    </footer>
 
 </body>
 </html>
+
