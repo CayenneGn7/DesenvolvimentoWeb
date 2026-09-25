@@ -1,490 +1,202 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Cartão de Visita - Cayenne</title>
-
-    <link rel="stylesheet" href="../Css/index.html">
+    <link rel="stylesheet" href="Css/index.html">
 </head>
-
 <body>
 
-    <a class="pular-conteudo" href="#conteudo">
-        Pular para o conteúdo principal
-    </a>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo principal</a>
 
     <header>
-
         <div class="header-conteudo">
-
             <div class="header-texto">
-
                 <h1>Cayenne Galante do Nascimento</h1>
-
-                <p>
-                    Análise e Desenvolvimento de Sistemas - ADS
-                </p>
-
+                <p>Análise e Desenvolvimento de Sistemas - ADS</p>
             </div>
-
-            <img
-                class="perfil"
-                src="../Imagens/perfil.jpg"
-                alt="Foto de perfil de Cayenne"
-            >
-
+            <img class="perfil" src="../Imagens/perfil.jpg" alt="Foto de perfil de Cayenne">
         </div>
-
     </header>
 
-
     <!-- MENU -->
-
     <nav>
-
         <a href="#sobre">Sobre</a>
-
         <a href="#habilidades">Habilidades</a>
-
         <a href="#hobbies">Hobbies</a>
-
         <a href="#contato">Contato</a>
-
         <a href="#objetivo">Objetivos</a>
-
         <a href="#sites">Sites</a>
-
     </nav>
-
 
     <hr>
 
-
     <!-- CONTEÚDO PRINCIPAL -->
-
     <main id="conteudo">
 
-
         <!-- SOBRE + HABILIDADES -->
-
         <div class="sobre-habilidades">
-
             <section id="sobre">
-
                 <h2>Sobre mim</h2>
-
-                <p>
-                    <strong>Cidade/UF:</strong> Jandira-SP
-                </p>
-
-                <p>
-                    <strong>Curso:</strong>
-                    Análise e Desenvolvimento de Sistemas - ADS
-                </p>
-
+                <p><strong>Cidade/UF:</strong> Jandira-SP</p>
+                <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas - ADS</p>
             </section>
-
 
             <section id="habilidades">
-
                 <h2>Habilidades</h2>
-
                 <table>
-
                     <thead>
-
                         <tr>
-
-                            <th scope="col">
-                                Tecnologia
-                            </th>
-
-                            <th scope="col">
-                                Nível
-                            </th>
-
-                            <th scope="col">
-                                Experiência (meses)
-                            </th>
-
+                            <th scope="col">Tecnologia</th>
+                            <th scope="col">Nível</th>
+                            <th scope="col">Experiência (meses)</th>
                         </tr>
-
                     </thead>
-
-
                     <tbody>
-
                         <tr>
-
                             <td>HTML</td>
-
                             <td>Intermediário</td>
-
                             <td>6 meses</td>
-
                         </tr>
-
-
                         <tr>
-
                             <td>CSS</td>
-
                             <td>Intermediário</td>
-
                             <td>6 meses</td>
-
                         </tr>
-
-
                         <tr>
-
                             <td>JavaScript</td>
-
                             <td>Básico</td>
-
                             <td>2 meses</td>
-
                         </tr>
-
                     </tbody>
-
                 </table>
-
             </section>
-
         </div>
 
-
         <!-- HOBBIES -->
-
         <section id="hobbies" class="hobbies">
-
             <h2>Hobbies</h2>
-
             <ul>
-
                 <li>
-
                     Tocar teclado
-
-                    <img
-                        src="../Imagens/play.jpg"
-                        alt=""
-                    >
-
+                    <img src="../Imagens/play.jpg" alt="">
                 </li>
-
-
                 <li>
-
                     Ler
-
-                    <img
-                        src="../Imagens/read (2).jpg"
-                        alt=""
-                    >
-
+                    <img src="../Imagens/read (2).jpg" alt="">
                 </li>
-
-
                 <li>
-
                     Ouvir música
-
-                    <img
-                        src="../Imagens/listen.jpg"
-                        alt=""
-                    >
-
+                    <img src="../Imagens/listen.jpg" alt="">
                 </li>
-
-
                 <li>
-
                     Jogar
-
-                    <img
-                        src="../Imagens/game.jpg"
-                        alt=""
-                    >
-
+                    <img src="../Imagens/game.jpg" alt="">
                 </li>
-
             </ul>
-
         </section>
 
-        
         <div class="contatosgeral">
+
             <section id="contato">
+                <h2>Contatos</h2>
+                <ul>
+                    <li>
+                        <a href="https://github.com/CayenneGn7" target="_blank" rel="noopener noreferrer">Meu GitHub</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/cayenne-galante-do-nascimento/" target="_blank" rel="noopener noreferrer">Meu LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="mailto:cayennegnascimento@gmail.com">Meu e-mail</a>
+                    </li>
+                </ul>
+            </section>
 
-            <h2>Contatos</h2>
+            <!-- FORMULÁRIO -->
+            <section id="contato-form">
+                <h2>Entre em contato</h2>
+                <form>
+                    <label for="nomeContato">Nome:</label>
+                    <input type="text" id="nomeContato" name="nome" autocomplete="name" required>
 
-            <ul>
+                    <br><br>
 
-                <li>
+                    <label for="emailContato">E-mail:</label>
+                    <input type="email" id="emailContato" name="email" autocomplete="email" required>
 
-                    <a
-                        href="https://github.com/CayenneGn7"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Meu GitHub
-                    </a>
+                    <br><br>
 
-                </li>
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" name="assunto" placeholder="Dúvida, sugestão...">
 
+                    <br><br>
 
-                <li>
+                    <label for="mensagemContato">Mensagem:</label>
+                    <textarea id="mensagemContato" name="mensagem" placeholder="Digite sua mensagem aqui..." required></textarea>
 
-                    <a
-                        href="https://www.linkedin.com/in/cayenne-galante-do-nascimento/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Meu LinkedIn
-                    </a>
+                    <br><br>
 
-                </li>
-
-
-                <li>
-
-                    <a href="mailto:cayennegnascimento@gmail.com">
-                        Meu e-mail
-                    </a>
-
-                </li>
-
-            </ul>
-
-        </section>
-
-
-        <!-- FORMULÁRIO -->
-
-        <section id="contato-form">
-
-            <h2>Entre em contato</h2>
-
-            <form>
-
-                <label for="nomeContato">
-                    Nome:
-                </label>
-
-                <input
-                    type="text" id="nomeContato"
-                    name="nome"
-                    autocomplete="name"
-                    required
-                >
-
-                <br><br>
-
-
-                <label for="emailContato">
-                    E-mail:
-                </label>
-
-                <input
-                    type="email"
-                    id="emailContato"
-                    name="email"
-                    autocomplete="email"
-                    required
-                >
-
-                <br><br>
-
-
-                <label for="assunto">
-                    Assunto:
-                </label>
-
-                <input
-                    type="text"
-                    id="assunto"
-                    name="assunto"
-                    placeholder="Dúvida, sugestão..."
-                >
-
-                <br><br>
-
-
-                <label for="mensagemContato">
-                    Mensagem:
-                </label>
-
-                <textarea
-                    id="mensagemContato"
-                    name="mensagem"
-                    placeholder="Digite sua mensagem aqui..."
-                    required
-                ></textarea>
-
-                <br><br>
-
-
-                <button type="submit">
-                    Enviar mensagem
-                </button>
-
-            </form>
-
-        </section>
+                    <button type="submit">Enviar mensagem</button>
+                </form>
+            </section>
 
         </div>
 
         <!-- OBJETIVOS -->
-
         <section id="objetivo">
-
             <h2>Objetivos Profissionais</h2>
-
             <ol>
-
                 <li>
-
                     <strong>Curto prazo (6 meses):</strong>
-
-                    Estar atuando na área de tecnologia como
-                    Jovem Aprendiz em Tecnologia ou Projetos.
-
+                    Estar atuando na área de tecnologia como Jovem Aprendiz em Tecnologia ou Projetos.
                 </li>
-
-
                 <li>
-
                     <strong>Médio prazo (1-2 anos):</strong>
-
-                    Conseguir um estágio em Desenvolvimento de
-                    Software e começar a atuar diretamente na
-                    criação de aplicações.
-
+                    Conseguir um estágio em Desenvolvimento de Software e começar a atuar diretamente na criação de aplicações.
                 </li>
-
-
                 <li>
-
                     <strong>Longo prazo (3-5 anos):</strong>
-
-                    Trabalhar como desenvolvedora de software
-                    e atuar na criação de sistemas e soluções
-                    para problemas reais.
-
+                    Trabalhar como desenvolvedora de software e atuar na criação de sistemas e soluções para problemas reais.
                 </li>
-
             </ol>
-
         </section>
-
 
         <!-- SITES -->
-
         <section id="sites">
-
             <h2>TOP 5 sites que mais acesso</h2>
-
             <ol>
-
                 <li>
-
-                    <a
-                        href="https://www.youtube.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        YouTube
-                    </a>
-
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
                 </li>
-
-
                 <li>
-
-                    <a
-                        href="https://www.last.fm/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Last.fm
-                    </a>
-
+                    <a href="https://www.last.fm/" target="_blank" rel="noopener noreferrer">Last.fm</a>
                 </li>
-
-
                 <li>
-
-                    <a
-                        href="https://www.spotify.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Spotify
-                    </a>
-
+                    <a href="https://www.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
                 </li>
-
-
                 <li>
-
-                    <a
-                        href="https://letterboxd.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Letterboxd
-                    </a>
-
+                    <a href="https://letterboxd.com/" target="_blank" rel="noopener noreferrer">Letterboxd</a>
                 </li>
-
-
                 <li>
-
-                    <a
-                        href="https://archive.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Internet Archive
-                    </a>
-
+                    <a href="https://archive.org/" target="_blank" rel="noopener noreferrer">Internet Archive</a>
                 </li>
-
             </ol>
-
         </section>
 
-
         <!-- CURIOSIDADE -->
-
         <aside>
-
             <h3>Curiosidade sobre mim</h3>
-
-            <p>
-                Gosto de cuidar de hortas e plantas.
-            </p>
-
+            <p>Gosto de cuidar de hortas e plantas.</p>
         </aside>
-
 
     </main>
 
-
     <!-- RODAPÉ -->
-
     <footer>
-
         <p>Cayenne 2026</p>
-
     </footer>
 
-
 </body>
-
 </html>
