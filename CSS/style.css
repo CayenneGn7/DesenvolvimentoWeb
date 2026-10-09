@@ -6,14 +6,30 @@
     --linha: #D8D5CE;
     --card: #F7F5F0;
 }
+
 html,
 body {
     margin: 0;
     padding: 0;
 }
+
 body {
     background-color: var(--fundo);
 }
+
+.layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.5fr) minmax(0, 1.5fr);
+    grid-template-areas:
+        "header habilidades habilidades"
+        "sobre hobbies hobbies";
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
 nav {
     position: sticky;
     top: 0;
@@ -26,6 +42,7 @@ nav {
     padding: 22px;
     background-color: var(--fundo);
 }
+
 nav a {
     font-family: "IBM Plex Mono", monospace;
     font-size: 11px;
@@ -34,17 +51,22 @@ nav a {
     color: var(--claro);
     transition: color 0.2s ease;
 }
+
 nav a:hover {
     color: var(--textos);
 }
+
 hr {
     display: none;
 }
+
 .pular-conteudo {
     position: absolute;
     left: -9999px;
 }
+
 .header-conteudo {
+    grid-area: header;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -53,6 +75,7 @@ hr {
     margin: 60px auto 80px;
     padding: 0 40px;
 }
+
 .header-texto {
     display: flex;
     flex-direction: column;
@@ -66,6 +89,7 @@ hr {
     font-family: "IBM Plex Mono", monospace;
     font-size: 13px;
 }
+
 .header-texto h1 {
     margin: 0;
     font-family: "Manrope", sans-serif;
@@ -75,6 +99,7 @@ hr {
     line-height: 0.95;
     letter-spacing: -3px;
 }
+
 .perfil {
     width: 180px;
     height: 180px;
@@ -82,17 +107,16 @@ hr {
     border-radius: 50%;
     flex-shrink: 0;
 }
+
+main,
 .sobre-habilidades {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
+    display: contents;
 }
+
 .sobre-habilidades > hr {
     display: none;
 }
+
 #sobre,
 #habilidades,
 #hobbies {
@@ -101,13 +125,25 @@ hr {
     background-color: var(--card);
     border: 1px solid var(--linha);
     border-radius: 2px;
+    margin: 0;
 }
+
+#sobre {
+    grid-area: sobre;
+    align-self: start;
+}
+
+#habilidades {
+    grid-area: habilidades;
+}
+
 #sobre,
 #habilidades {
     display: grid;
     grid-template-columns: 30% 70%;
     padding: 35px 40px;
 }
+
 #sobre h2,
 #habilidades h2,
 #hobbies h2 {
@@ -119,14 +155,17 @@ hr {
     letter-spacing: 3px;
     text-transform: uppercase;
 }
+
 #sobre h2::before {
     content: "01 — ";
     color: var(--detalhes);
 }
+
 #habilidades h2::before {
     content: "02 — ";
     color: var(--detalhes);
 }
+
 #sobre .coisas {
     grid-column: 2;
     color: var(--textos);
@@ -134,45 +173,53 @@ hr {
     font-size: 14px;
     line-height: 1.8;
 }
+
 #sobre .coisas p {
     margin: 0 0 8px;
 }
+
 #habilidades table {
     grid-column: 2;
     width: 100%;
     border-collapse: collapse;
     font-family: "IBM Plex Mono", monospace;
 }
+
 #habilidades th,
 #habilidades td {
     padding: 15px 0;
     text-align: left;
     border-bottom: 1px solid var(--linha);
 }
+
 #habilidades tr:last-child td {
     border-bottom: none;
 }
+
 #habilidades th {
     color: var(--claro);
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 1px;
 }
+
 #habilidades td {
     color: var(--textos);
     font-size: 14px;
 }
+
 #hobbies {
+    grid-area: hobbies;
     display: grid;
     grid-template-columns: 30% 70%;
-    max-width: 1200px;
-    margin: 28px auto 100px;
     padding: 35px 40px;
 }
+
 #hobbies h2::before {
     content: "03 — ";
     color: var(--detalhes);
 }
+
 #hobbies ul {
     grid-column: 2;
     display: grid;
@@ -182,6 +229,7 @@ hr {
     padding: 0;
     list-style: none;
 }
+
 #hobbies li {
     position: relative;
     display: flex;
@@ -197,6 +245,7 @@ hr {
     font-size: 14px;
     letter-spacing: 1px;
 }
+
 #hobbies li img {
     position: absolute;
     inset: 0;
@@ -208,6 +257,7 @@ hr {
     opacity: 0.85;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
 #hobbies li::after {
     content: "";
     position: absolute;
@@ -219,6 +269,7 @@ hr {
         transparent 55%
     );
 }
+
 #hobbies li::before {
     content: "";
     position: absolute;
@@ -227,23 +278,28 @@ hr {
     border: 1px solid transparent;
     transition: border-color 0.2s ease;
 }
+
 #hobbies li:hover img {
     transform: scale(1.04);
     opacity: 1;
 }
+
 #hobbies li:hover::before {
     border-color: var(--detalhes);
 }
+
 footer {
     background-color: var(--textos);
     color: #F2F0EB;
     margin: 0;
 }
+
 #contato {
     max-width: 1200px;
     margin: 0 auto;
     padding: 70px 40px 0;
 }
+
 #contato > h2 {
     margin: 0 0 12px;
     color: #F2F0EB;
@@ -252,12 +308,14 @@ footer {
     font-weight: 500;
     letter-spacing: -0.5px;
 }
+
 #contato > p {
     margin: 0 0 28px;
     color: #8F9196;
     font-family: "IBM Plex Mono", monospace;
     font-size: 13px;
 }
+
 #contato ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -269,17 +327,21 @@ footer {
     border-radius: 2px;
     overflow: hidden;
 }
+
 #contato li {
     padding: 28px;
     border-right: 1px solid #2C2F33;
     transition: background-color 0.2s ease;
 }
+
 #contato li:last-child {
     border-right: none;
 }
+
 #contato li:hover {
     background-color: #24272A;
 }
+
 #contato li p {
     margin: 0 0 16px;
     color: #8F9196;
@@ -288,6 +350,7 @@ footer {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
 #contato li a {
     color: #F2F0EB;
     font-family: "Space Mono", monospace;
@@ -295,9 +358,11 @@ footer {
     text-decoration: none;
     transition: color 0.2s ease;
 }
+
 #contato li:hover a {
     color: var(--detalhes);
 }
+
 #contato-form {
     width: 100%;
     max-width: 1200px;
@@ -305,6 +370,7 @@ footer {
     padding: 0 40px;
     box-sizing: border-box;
 }
+
 #contato-form h2 {
     margin: 0 0 20px;
     color: #F2F0EB;
@@ -312,6 +378,7 @@ footer {
     font-size: 20px;
     font-weight: 500;
 }
+
 #contato-form form {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -320,9 +387,11 @@ footer {
     border: 1px solid #2C2F33;
     border-radius: 2px;
 }
+
 #contato-form label {
     display: none;
 }
+
 #contato-form input,
 #contato-form textarea {
     box-sizing: border-box;
@@ -336,20 +405,24 @@ footer {
     font-family: "Space Mono", monospace;
     font-size: 13px;
 }
+
 #contato-form input:focus,
 #contato-form textarea:focus {
     border-color: var(--detalhes);
 }
+
 #contato-form input::placeholder,
 #contato-form textarea::placeholder {
     color: #686B70;
     font-family: "Space Mono", monospace;
 }
+
 #contato-form textarea {
     grid-column: span 2;
     height: 45px;
     resize: none;
 }
+
 #contato-form button {
     height: 45px;
     border: 1px solid var(--detalhes);
@@ -361,10 +434,12 @@ footer {
     cursor: pointer;
     transition: 0.2s ease;
 }
+
 #contato-form button:hover {
     background-color: var(--detalhes);
     color: var(--textos);
 }
+
 footer > p {
     margin: 60px 0 0;
     padding: 20px 0;
