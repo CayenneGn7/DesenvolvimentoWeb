@@ -40,7 +40,7 @@ const temaSalvo = localStorage.getItem("tema");
 
 if (temaSalvo === "escuro") {
     raiz.setAttribute("data-tema", "escuro");
-    botaoTema.textContent = "☀";
+    botaoTema.textContent = "☀︎︎";
     botaoTema.setAttribute("aria-label", "Ativar modo claro");
     botaoTema.setAttribute("aria-pressed", "true");
 }
@@ -59,7 +59,7 @@ botaoTema.addEventListener("click", function () {
         raiz.setAttribute("data-tema", "escuro");
         localStorage.setItem("tema", "escuro");
 
-        botaoTema.textContent = "☀︎";
+        botaoTema.textContent = "☀︎︎";
         botaoTema.setAttribute("aria-label", "Ativar modo claro");
         botaoTema.setAttribute("aria-pressed", "true");
     }
