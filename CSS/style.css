@@ -727,3 +727,7 @@ footer {
         font-size: 11px;
     }
 }
+html[data-tema="escuro"],
+html[data-tema="escuro"] body {
+    background-color: #17191C !important;
+}
