@@ -733,3 +733,10 @@ html[data-tema="escuro"],
 html[data-tema="escuro"] body {
     background-color: #17191C !important;
 }
+html[data-tema="escuro"] form,
+html[data-tema="escuro"] form label,
+html[data-tema="escuro"] form input,
+html[data-tema="escuro"] form textarea,
+html[data-tema="escuro"] form select {
+    color: #F2F0EB;
+}
