@@ -1,3 +1,4 @@
+
 :root {
     --detalhes: #ffa6e4;
     --textos: #1F2124;
@@ -5,6 +6,21 @@
     --claro: #8f9691;
     --linha: #d1d8ce;
     --card: #F7F5F0;
+
+    --rodape: #1F2124;
+    --linha-rodape: #2C2F33;
+}
+
+[data-tema="escuro"] {
+    --detalhes: #ffa6e4;
+    --textos: #F2F0EB;
+    --fundo: #17191C;
+    --claro: #A5AAA7;
+    --linha: #383B40;
+    --card: #25282D;
+
+    --rodape: #111315;
+    --linha-rodape: #34373B;
 }
 
 * {
@@ -14,15 +30,17 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 85px;
+    min-height: 100%;
+    background-color: var(--fundo);
 }
-
 body {
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     background-color: var(--fundo);
     color: var(--textos);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 img {
     max-width: 100%;
 }
@@ -58,6 +76,7 @@ nav {
     padding: 22px;
     background-color: var(--fundo);
     border-bottom: 1px solid var(--linha);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 nav a {
@@ -151,6 +170,7 @@ main,
     background-color: var(--card);
     border: 1px solid var(--linha);
     border-radius: 2px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 #sobre {
@@ -308,8 +328,9 @@ main,
 
 footer {
     margin: 70px 0 0;
-    background-color: var(--textos);
+    background-color: var(--rodape);
     color: var(--fundo);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #contato {
@@ -343,7 +364,7 @@ footer {
     margin: 30px 0;
     padding: 0;
     overflow: hidden;
-    border: 1px solid #2C2F33;
+    border: 1px solid var(--linha-rodape);
     border-radius: 2px;
     list-style: none;
 }
@@ -351,7 +372,7 @@ footer {
 #contato li {
     min-width: 0;
     padding: 28px;
-    border-right: 1px solid #2C2F33;
+    border-right: 1px solid var(--linha-rodape);
     transition: background-color 0.2s ease;
 }
 
@@ -360,7 +381,7 @@ footer {
 }
 
 #contato li:hover {
-    background-color: #24272A;
+    background-color: var(--linha-rodape);
 }
 
 #contato li p {
@@ -406,7 +427,7 @@ footer {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
     padding: 20px;
-    border: 1px solid #2C2F33;
+    border: 1px solid var(--linha-rodape);
     border-radius: 2px;
 }
 
@@ -427,7 +448,7 @@ footer {
     width: 100%;
     min-width: 0;
     padding: 12px 14px;
-    border: 1px solid #2C2F33;
+    border: 1px solid var(--linha-rodape);
     border-radius: 2px;
     outline: none;
     background: transparent;
@@ -644,7 +665,7 @@ footer {
     #contato li {
         padding: 20px;
         border-right: none;
-        border-bottom: 1px solid #2C2F33;
+        border-bottom: 1px solid var(--linha-rodape);
     }
 
     #contato li:last-child {
@@ -679,4 +700,36 @@ footer {
         margin-top: 35px;
         font-size: 11px;
     }
+}
+#alternarTema {
+    position: absolute;
+    top: 12px;
+    right: 25px;
+    z-index: 2000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid var(--linha);
+    border-radius: 50%;
+    background-color: var(--card);
+    color: var(--textos);
+
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#alternarTema:hover {
+    border-color: var(--detalhes);
+    color: var(--detalhes);
+}
+
+html[data-tema="escuro"],
+html[data-tema="escuro"] body {
+    background-color: #17191C !important;
 }
